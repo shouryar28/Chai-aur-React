@@ -13,7 +13,7 @@ function App() {
   function addValue() {
     counter++;
 
-    if(counter > 20){
+    if (counter > 20) {
       counter = 20;
     }
     setCounter(counter); // ye UI update kardega aaram se , hume document.fala dhimkana likhne ka koin jarurat nhi hai
