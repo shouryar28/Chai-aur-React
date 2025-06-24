@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <h1 className="flex bg-green-400 p-4 rounded-xl text-black ">
+      <h1 className="flex bg-green-500 p-4 rounded-xl text-black ">
         Tailwind props
       </h1>
       <Card userName = "Shourya Raj" rollNo = {46} dept = "CSE-AIML" btn = "Show Details"/>
