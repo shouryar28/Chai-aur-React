@@ -1,41 +1,33 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 
-function App() {
-  let [counter, setCounter] = useState(10);
+function App(){
+  
+   let[count, setCount] = useState(0)
 
-  let increaseValue = () => {  // arrow function ke pehle datatype likhna jaruri hota hai 
+   function addValue(){
+    count++;
     
-    counter++;
-    
-    if (counter >= 20){
-      counter = 20;
-      
+    if(count > 20){
+      count = 20;
     }
-    setCounter(counter);
-  };
+      setCount(count); // setcount ek function hai note that don't assign it like variable
+   }
 
-  let decreaseValue = () => {
-    counter--;
+   function decreaseValue() {
+    count--;
 
-    if(counter < 0){
-      counter = 0
+    if(count < 0){
+      count = 0;
     }
-    setCounter(counter);
-  };
+    setCount(count);
+   }
 
-  return (
-    <>
-      <h1>Chai 🍵 aur React ⚛️ </h1>
-      <h2>Count = {counter}</h2>
-      <button onClick={increaseValue}>+ 1</button>
-      <br />
-      <br />
-      <button onClick={decreaseValue}>- 1</button>
-    </>
-  );
+   return <>
+     <h1>The value of count is : {count}</h1>
+     <button onClick={addValue}> Increase Count +1 </button>
+     <br />
+     <br />
+     <button onClick={decreaseValue}> Decrease Count -1</button>
+   </>
 }
-
 export default App;
