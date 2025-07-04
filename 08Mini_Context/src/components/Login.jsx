@@ -7,8 +7,9 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const {setUser} = useContext(UserContext); // setUser is an object which will going to store password and username
-
+  const {setUser} = useContext(UserContext); 
+  // setUser itself is not an object, but a function that updates the user object held in context (via useState in UserContextProvider).
+  
   const handleSubmit = (e) => {
     e.preventDefault();  // ye help karta hai value ko khi bhi random jagah jaane se
     setUser({username, password})
