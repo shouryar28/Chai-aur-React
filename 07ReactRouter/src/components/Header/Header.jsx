@@ -43,7 +43,7 @@ export default function Header() {
                   }
                 >
                   Home
-                </NavLink>
+                </NavLink> 
               </li>
                <li>
                 <NavLink
